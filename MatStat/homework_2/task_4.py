@@ -9,23 +9,22 @@ def combinations(n, k):
 # что все мячи белые? Какова вероятность того, что ровно два мяча белые? Какова вероятность того,
 # что хотя бы один мяч белый?
 
-# bucket_1_total_combinations = combinations(10, 2)
-# # bucket_2_total_combinations = combinations(11, 2)
-# #
-# # p_bucket_1 =
-# #
-# # print(bucket_1_total_combinations)
-# # print(bucket_2_total_combinations)
+taken_balls_combinations = combinations(4, 2)
 
 
 # Какова вероятность того, что все мячи белые?
-bucket_1_balls_probability = 7 / 10 * 6 / 9
-bucket_2_balls_probability = 9 / 11 * 8 / 10
-four_balls_white = bucket_1_balls_probability * bucket_2_balls_probability
-# Ответ: вероятность того, что все мячи белые равна 0.29 или 29%
+
+four_balls_white = (combinations(7, 2) / combinations(10, 2)) * (combinations(9, 2) / combinations(11, 2))
+# Ответ: вероятность того, что все мячи белые равна 0.30 или 30%
+
+
+# Какова вероятность того, что хотя бы один мяч белый?
+four_black_balls = (combinations(3, 2) / combinations(10, 2)) * (combinations(2, 2) / combinations(11, 2))
+# Все черные 0.0012
+
+at_least_one_white = 1 - four_black_balls
+# Ответ: вероятность того, что хотя бы один мяч белый 0.99 или 99%
 
 
 # Какова вероятность того, что ровно два мяча белые?
-four_balls_combinations = combinations(4, 1)
-
-# Какова вероятность того, что хотя бы один мяч белый?
+# Не успел и не получилось :(
