@@ -23,4 +23,4 @@ p2 = (prior_prob_2 * 0.7) / full_prob
 
 # на факультете C
 p3 = (prior_prob_3 * 0.9) / full_prob
-# Ответ: 0.21
+# Ответ: 0.54
