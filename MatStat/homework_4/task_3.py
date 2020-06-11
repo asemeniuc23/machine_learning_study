@@ -8,6 +8,6 @@ from math import sqrt
 # в). std(X) (среднее квадратичное отклонение)
 
 variance = 16
-mean = 2
+mean = -2
 std = sqrt(variance)
 # Ответ: 4
