@@ -6,8 +6,7 @@ from math import sqrt
 # помощи доверительного интервала, покрывающего это значение с доверительной вероятностью 0,95.
 
 sample = [6.9, 6.1, 6.2, 6.8, 7.5, 6.3, 6.4, 6.9, 6.7, 6.1]
-# Z для 97.5% (2.5 + 95%) равна 1.96
-Z = 1.96
+Z = 2.262
 
 M = sum(sample ) / len(sample)
 std = sqrt(sum((x - sum(sample ) / len(sample)) ** 2 for x in sample) / (len(sample)))
@@ -15,4 +14,7 @@ std = sqrt(sum((x - sum(sample ) / len(sample)) ** 2 for x in sample) / (len(sam
 
 confidence_interval_a = M - Z * (std / sqrt(len(sample)))
 confidence_interval_b = M + Z * (std / sqrt(len(sample)))
-# Ответ: (6.32;6.85)
+# Ответ: (6.28;6.89)
+
+
+print(confidence_interval_b)

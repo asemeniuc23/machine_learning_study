@@ -6,13 +6,13 @@ from math import sqrt
 
 sample = [202, 203, 199, 197, 195, 201, 200, 204, 194, 190]
 n = 10
-std = sqrt(sum((x - sum(sample ) / len(sample)) ** 2 for x in sample) / (len(sample)))
-# Z табл для 99% равно 2.33
-Zt = 2.33
+std = sqrt(sum((x - sum(sample ) / len(sample)) ** 2 for x in sample) / (len(sample) - 1))
+# Z стьюдента
+Zc = 3.250
 X = sum(sample) / len(sample)
 u0 = 200
 
 
 Zo = (X - u0) / (std / sqrt(n))
-# Z наблюдаемое равно -1.12
-# Ответ: H0 верна (Zн < Zт) при α=0,01
+# Z наблюдаемое равно -1.06
+# Ответ: H0 верна (Zн < Zc) при α=0,01
